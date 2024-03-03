@@ -7,13 +7,15 @@ import React from "react";
 import Widget from "@/components/Widget/Widget";
 
 export default function Home() {
-	const [widgetChanges, setWidgetChanges] = React.useState({});
+	const [widgetChanges, setWidgetChanges] = React.useState<{ [key: number]: WidgetType }>({});
 	const [activeWidget, setActiveWidget] = React.useState(
 		widgets?.find((widget) => widget.active)?.id || null
 	);
 
 	const handleWidgetChange = (data: WidgetType, id: number) => {
-		(data.active && data.id !== activeWidget) && setActiveWidget(id);
+		if (data.active && data.id !== activeWidget) {
+			setActiveWidget(id);
+		}
 
 		setWidgetChanges((existingChanges) => ({
 			...existingChanges,
@@ -31,7 +33,10 @@ export default function Home() {
 						widgets.map((data) => (
 							<Widget
 								active={activeWidget === data.id}
-								data={data}
+								data={{
+									...data,
+									...(widgetChanges[data.id] ?? {})
+								}}
 								key={`product-widget-${data.id}`}
 								onChange={handleWidgetChange}
 							/>

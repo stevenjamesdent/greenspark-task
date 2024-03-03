@@ -41,6 +41,7 @@ const Widget = ({
     React.useEffect(() => {
         onChange({
             ...data,
+            active: active,
             linked: badgeLinked,
             selectedColor: badgeColor,
         }, data.id);
