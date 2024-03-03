@@ -1,8 +1,8 @@
-Created by Steven James Dent for Greenspark interview task.
-
+Created by Steven James Dent for Greenspark interview task
+--------------------------------------
 Production-ready code has been deployed on Vercel for easy viewing, [take a look at it here](https://greenspark-task-sdent.vercel.app/).
 
-Or to set run locally:
+Or to run locally:
 --------------------------------------
 To run the development server and watch tasks:
 ```bash
