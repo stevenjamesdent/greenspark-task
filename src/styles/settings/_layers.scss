@@ -1,0 +1,17 @@
+// My preferred approach to z-indexing, a variable 'map' of the layers of the application
+// Helps to avoid z-indexing issues and disuades people from doing things like "z-index: 99999999999;"
+// 
+
+$layers: (
+    background: (),
+    page: (
+        main,
+    ),
+    block: (
+        background,
+        foreground,
+        content
+    ),
+    alerts: (),
+    top: ()
+);

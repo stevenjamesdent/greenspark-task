@@ -1,0 +1,40 @@
+/*---------------------------------*/
+/*---------- Base Styles ----------*/
+/*---------------------------------*/
+
+@use '@/styles/settings' as *;
+@use '@/styles/utils' as *;
+
+*,
+*:before,
+*:after {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-standard);
+    overflow-x: hidden;
+    position: relative;
+}
+
+main {
+    min-height: 100%;
+    position: relative;
+    z-index: get-layer(page, main);
+}

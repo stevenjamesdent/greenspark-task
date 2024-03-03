@@ -1,0 +1,42 @@
+@use '@/styles/settings' as *;
+@use '@/styles/utils' as *;
+
+:root {
+    // -----------------------------------------------------
+    // Font Sizes
+    // -----------------------------------------------------
+        --font-base: 1rem;
+
+        --h1: calc(var(--font-base) * 2.25);
+        --h2: calc(var(--font-base) * 1.95);
+        --h3: calc(var(--font-base) * 1.875);
+        --h4: calc(var(--font-base) * 1.5);
+        --h5: calc(var(--font-base) * 1.25);
+        --h6: calc(var(--font-base) * 1);
+
+        --font-small:       calc(var(--font-base) / 1.15);
+        --font-standard:    calc(var(--font-base) * 1);
+        --font-large:       calc(var(--font-base) * 1.25);
+    // -----------------------------------------------------
+    
+    // -----------------------------------------------------
+    // Layout
+    // -----------------------------------------------------
+        --gutter-large: 20%;
+        --gutter-medium: 10%;
+        --gutter-small: 5%;
+    // -----------------------------------------------------
+    
+    // -----------------------------------------------------
+    // Colors
+    // -----------------------------------------------------
+        --beige: #{$beige};
+        --black: #{$black};
+        --blue: #{$blue};
+        --green: #{$green};
+        --grey_dark: #{$grey_dark};
+        --grey_light: #{$grey_light};
+        --off_white: #{$off_white};
+        --white: #{$white};
+    // -----------------------------------------------------
+}

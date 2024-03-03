@@ -1,0 +1,11 @@
+@use '@/styles/settings' as *;
+@use '@/styles/utils' as *;
+
+.wrapper {
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: $base-border-radius;
+    display: flex;
+    gap: $base-spacing;
+    padding: $base-spacing;
+}

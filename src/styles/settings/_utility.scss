@@ -1,0 +1,23 @@
+$base-border-radius: 4px;
+$base-spacing: 1rem;
+$checkbox_size: 1.75em;
+$checkbox_transition: all 0.25s ease;
+$max-site-width: 1800px;
+
+// IMPORTANT: Breakpoint changes must be reflected in tailwind config.
+// -------------------------
+$breakpoints: (
+    'mobile':       650px,
+    'tablet':       800px,
+    'laptop':       1050px,
+    'desktop':      1450px
+);
+// -------------------------
+
+$spacing-sizes: (
+    0:      0,
+    's':    #{$base-spacing / 2},
+    'm':    #{$base-spacing},
+    'l':    #{$base-spacing * 2},
+    'a':    'auto'
+);

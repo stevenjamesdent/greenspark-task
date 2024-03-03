@@ -1,0 +1,7 @@
+@use '@/styles/settings' as *;
+@use '@/styles/utils' as *;
+
+.wrapper {
+    color: $green;
+    display: inline-flex;
+}
