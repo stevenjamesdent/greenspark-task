@@ -1,45 +1,31 @@
-Thank you for your consideration 
+Created by Steven James Dent for Greenspark interview task.
 
+Production-ready code has been deployed on Vercel for easy viewing, [take a look at it here](https://greenspark-task-sdent.vercel.app/).
 
-
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
+Or to set run locally:
+--------------------------------------
 To run the development server and watch tasks:
-
 ```bash
+npm install
+# then
 npm run dev
 ```
 
-Or to build for production and run:
-
+To build for production and run:
 ```bash
+npm install
+# then
 npm run build
 # then
 npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Methodology, Decisions, and Notes:
+--------------------------------------
+I've chosen to use React + TypeScript + NextJS for this task. React is my usual route of choice and I felt that it was important to show my experience with TypeScript. I chose to go the NextJS route because I considered that there may be additional enhancements for this task further into the interview process - in which case I expected that the features of NextJS, such as the routing system, might come in handy down the line.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For styling, you'll see that the project uses a combination of both SCSS Modules for more bespoke or complex styling, as well as an incorporation of TailwindCSS. I chose to use Tailwind because I feel it can be a powerful tool to help speed development and cut-down on repetition across simple layouts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The majority of the implementation is custom and from-scratch, with the exception of the tooltips. While there was some customisation here, I chose to use a third-party library called [FloatingUI](https://floating-ui.com/). I chose this approach because I feel that it's important to recognise when a well established third-party asset is more appropriate than coding something from scratch. I could have made my own tooltip component for this, however it would not have been as versatile or as refined as what this library allowed me to implement. Why reinvent the wheel when talented opensource developers have already done more research, development, and QA than you could afford to give one small aspect of a UI on your own, especially given considerations for timelines and resource.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I believe my implementation closely matches the designs and specs provided. I did make a couple of small changes to the colour picker UI. When I came to implement this section I found that the lighter colours (beige and white) were barely discernable from the background of the page/block. I felt that this presented a minor accessibility issue, so I chose to add a subtle border to the coloured squares, as well as a subtle drop-shadow on hover. This means that the lighter colours carry as much weight as the darker ones and are more noticeable for visually-impaired users. Usually I would speak to the designer and/or stakeholders before deviating from designs, however without that point of contact in this instance I chose to take the initiative.
