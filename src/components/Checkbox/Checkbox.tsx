@@ -24,8 +24,9 @@ const Checkbox = ({
 
     return (
         <div className={conditionalClassNames} style={style} title={label}>
-            <label className={styles.checkbox} htmlFor={name}>
+            <label data-testid="checkbox" className={styles.checkbox} htmlFor={name}>
                 <input
+                    data-testid="checkbox-input"
                     className={styles.checkbox_input}
                     defaultChecked={defaultChecked}
                     id={name}

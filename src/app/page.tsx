@@ -8,7 +8,7 @@ import Widget from "@/components/Widget/Widget";
 
 export default function Home() {
 	const [widgetChanges, setWidgetChanges] = React.useState<{ [key: number]: WidgetType }>({});
-	const [activeWidget, setActiveWidget] = React.useState(
+	const [activeWidget, setActiveWidget] = React.useState<number | null>(
 		widgets?.find((widget) => widget.active)?.id || null
 	);
 

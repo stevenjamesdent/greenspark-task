@@ -10,6 +10,7 @@ export interface Props {
     className?: string,
     label: string,
     style?: React.CSSProperties,
+    tag?: 'label' | 'div' | 'span',
     tooltip?: TooltipProps,
 }
 
@@ -17,19 +18,23 @@ const Label = ({
     className,
     label,
     style,
+    tag,
     tooltip,
+    ...props
 } : Props): React.ReactElement => {
     const conditionalClassNames = classNames(className, {});
 
+    const Tag = tag ?? 'div';
+
     return (
-        <div className={clsx(styles.wrapper, conditionalClassNames)} style={style}>
+        <Tag data-testid="label" className={clsx(styles.wrapper, conditionalClassNames)} style={style} {...props}>
             {label}
             {
                 tooltip ?
                     <Tooltip {...tooltip}><Icon icon={InfoIcon} size={10} /></Tooltip>
                 : null
             }
-        </div>
+        </Tag>
     );
 };
 

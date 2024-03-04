@@ -26,7 +26,7 @@ const Heading = ({
     const Tag = tag;
 
     return (
-        <Tag className={clsx(styles.heading, conditionalClassNames)} style={style}>
+        <Tag data-testid='heading' className={clsx(styles.heading, conditionalClassNames)} style={style}>
             <div className={className}>
                 {children}
             </div>

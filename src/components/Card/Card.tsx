@@ -35,7 +35,7 @@ const Card = ({
         <div className={clsx(styles.wrapper, conditionalClassNames, colorModifier)} style={wrapperStyle}>
             <Icon icon={GreensparkIcon} size={50} />
             <div>
-                {intro}
+                <div data-testid="card-intro">{intro}</div>
                 <Heading tag='span' appearance='h5'>{title}</Heading>
             </div>
         </div>

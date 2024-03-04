@@ -37,6 +37,7 @@ const Color = ({
         <div className={conditionalClassNames} style={style} title={prettyName}>
             <label className={styles.color} htmlFor={`${groupName}-${colorName}`} style={colorValueStyle}>
                 <input
+                    data-testid={`input-color-${colorName}`}
                     className={styles.color_input}
                     id={`${groupName}-${colorName}`}
                     name={groupName}
@@ -61,10 +62,10 @@ const ColorPicker = ({className, style, name, onChange, defaultValue} : ColorPic
 
                     return (
                         <Color
-                            key={`color-option-${color}`}
                             colorName={color as keyof typeof availableColors}
                             defaultChecked={color === defaultValue}
                             groupName={name}
+                            key={`color-option-${color}`}
                             onChange={(active) => active && onChange(color as Colour)}
                         />
                     );

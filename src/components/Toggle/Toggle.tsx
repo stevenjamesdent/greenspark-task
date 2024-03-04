@@ -9,7 +9,7 @@ export interface Props {
     name: string,
     onChange: (active: boolean) => void,
     radioGroupName?: string,
-    inputRef: React.RefObject<HTMLInputElement>,
+    inputRef?: React.RefObject<HTMLInputElement>,
     style?: React.CSSProperties,
 }
 
@@ -27,9 +27,10 @@ const Toggle = ({
 
     return (
         <div className={conditionalClassNames} style={style} title={label}>
-            <label className={styles.toggle} htmlFor={name}>
+            <label data-testid="toggle" className={styles.toggle} htmlFor={name}>
                 <input
                     className={styles.toggle_input}
+                    data-testid="toggle-input"
                     defaultChecked={defaultChecked}
                     id={name}
                     name={radioGroupName || name}

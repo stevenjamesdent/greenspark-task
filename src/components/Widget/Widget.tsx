@@ -55,7 +55,7 @@ const Widget = ({
     }
 
     return (
-        <div className={clsx(styles.wrapper, conditionalClassNames)} style={style}>
+        <div data-testid="widget" className={clsx(styles.wrapper, conditionalClassNames)} style={style}>
             <Card
                 background={badgeColor}
                 intro={`This product ${data.action}`}
